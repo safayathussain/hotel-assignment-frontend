@@ -1,23 +1,21 @@
 import logo from './logo.svg';
 import './App.css';
+import { RouterProvider } from 'react-router-dom';
+import { router } from './router';
+import { Toaster } from 'react-hot-toast';
+import CustomNavbar from './components/Navbar';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Toaster position='top-center'
+      />
+      <div className='d-flex-col align-items-center container p-2 p-md-5'>
+        <CustomNavbar />
+
+        <RouterProvider router={router}>
+        </RouterProvider>
+      </div>
     </div>
   );
 }
