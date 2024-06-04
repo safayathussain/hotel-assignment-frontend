@@ -46,7 +46,7 @@ const CustomNavbar = () => {
                                 }
                             </Nav>
                             <Nav>
-                                <Nav.Link href="/my-tweets" className='fw-bold'>{auth?.name || ''}</Nav.Link>
+                                <Nav.Link href="/" className='fw-bold'>{auth?.name || ''}</Nav.Link>
 
                             </Nav>
                         </div>
