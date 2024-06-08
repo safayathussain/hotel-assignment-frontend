@@ -107,7 +107,7 @@ const Cart = () => {
 
             <div>
               <h3>Total Price: ${cart?.total}</h3>
-              <Button onClick={handleOrder} variant="success" size='lg' disabled={cart?.items?.length === 0}>Place order</Button>
+              <Button onClick={handleOrder} variant="success" size='lg' disabled={cart?.items?.length === 0 || !JSON.parse(localStorage.getItem('auth'))?.email}>Place order</Button>
             </div>
           </div>
       }
